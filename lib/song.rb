@@ -6,8 +6,8 @@ class Song
 
   def initialize(name, artist = nil, genre = nil)
     @name = name
-    @artist = artist
-    @genre = genre
+    @artist = artist if artist
+    @genre = genre if genre
   end
 
   def self.new_by_filename(file)
@@ -18,8 +18,7 @@ class Song
   end
 
   def artist=(artist)
-    @artist = artist
-    self.artist = Artist.find_or_create_by_name(name)
+    self.artist = Artist.find_or_create_by_name(artist)
     self.artist.add_song(self) unless artist.songs.include?(self)
   end
 

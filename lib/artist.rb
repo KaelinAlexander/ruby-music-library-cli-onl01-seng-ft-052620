@@ -40,7 +40,8 @@ attr_accessor :name, :artist, :genre, :songs
   # end
 
   def self.find_or_create_by_name(name)
-    if artist = all.find {|artist| artist.name == name}
+    artist = all.find {|artist| artist.name == name}
+    if artist
       artist
     else
       artist = self.new(name)
