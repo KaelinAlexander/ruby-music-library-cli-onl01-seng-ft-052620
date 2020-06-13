@@ -1,7 +1,8 @@
 require "pry"
 
 class Artist
-attr_accessor :name, :artist, :genre, :songs
+attr_accessor :name
+
 @@all = []
 
   def initialize(name)
@@ -28,6 +29,10 @@ attr_accessor :name, :artist, :genre, :songs
     @@all << self
   end
 
+  def songs
+    @songs
+  end
+
   def self.create(name)
     artist = Artist.new(name)
     artist.save
@@ -35,18 +40,19 @@ attr_accessor :name, :artist, :genre, :songs
   end
 
   # def songs
-  #   @songs = Song.all.select {|song| song.artist == self}
-  #   @songs
+  #   Song.all.select {|song| song.artist == self}
   # end
 
   def self.find_or_create_by_name(name)
-    artist = all.find {|artist| artist.name == name}
-    if artist
-      artist
+    if all.find {|artist| artist.name == name}
+      all.find {|artist| artist.name == name}
     else
-      artist = self.new(name)
+      self.new(name)
     end
   end
 
+  def genres
+    self.songs.collect{|s| s.genre}.uniq
+  end
 
 end
