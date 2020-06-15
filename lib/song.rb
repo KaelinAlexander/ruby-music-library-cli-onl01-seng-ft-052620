@@ -1,5 +1,3 @@
-require "pry"
-
 class Song
   attr_accessor :name
   attr_reader :artist, :genre
@@ -7,26 +5,9 @@ class Song
 
   def initialize(name, artist = nil, genre = nil)
     @name = name
-    @artist = artist if artist
-    @genre = genre if genre
+    self.artist = artist if artist
+    self.genre = genre if genre
   end
-
-  def self.new_by_filename(file)
-    name = file.split(" - ")[1]
-    song = self.new(name)
-    song.artist_name = file.split(" - ")[0]
-    song
-  end
-
-  def artist=(artist)
-    self.artist = Artist.find_or_create_by_name(artist)
-    self.artist.add_song(self) unless artist.songs.include?(self)
-  end
-
-  def genre=(genre)
-		@genre = genre
-		genre.add_song(self) unless category.songs.include?(self)
-	end
 
   def self.all
     @@all
@@ -46,24 +27,40 @@ class Song
     song
   end
 
-  def self.new_by_filename(file)
+  def self.new_from_filename(file)
     name = file.split(" - ")[1]
-    song = self.new(name)
-    song.artist_name = file.split(" - ")[0]
-    song
+    artist = file.split(" - ")[0]
+    genre = file.split(" - ")[2].delete(".mp3")
+    artist_object = Artist.find_or_create_by_name(artist)
+    genre_object = Genre.find_or_create_by_name(genre)
+    Song.new(name, artist_object, genre_object)
+  end
+
+  def self.create_from_filename(file)
+    song = self.new_from_filename(file)
+    song.save
   end
 
   def artist=(artist)
     @artist = artist
-    self.artist = Artist.find_or_create_by_name(name)
     self.artist.add_song(self)
-    # @artist = artist
-    # artist.add_song(self) unless artist.songs.include?(self)
   end
 
   def genre=(genre)
-		@genre = genre
-		genre.songs << self unless genre.songs.include?(self)
-	end
+    @genre = genre
+    genre.songs << self unless genre.songs.include?(self)
+  end
+
+  def self.find_by_name(name)
+      self.all.find{|song| song.name == name}
+  end
+
+  def self.find_or_create_by_name(name)
+    if self.find_by_name(name) == NIL
+      self.create(name)
+    else
+      self.find_by_name(name)
+    end
+  end
 
 end
