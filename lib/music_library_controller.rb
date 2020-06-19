@@ -28,7 +28,7 @@ class MusicLibraryController
           list_artists
           main_menu
       when "list genres"
-
+          list_genres
           main_menu
       when "list artist"
 
