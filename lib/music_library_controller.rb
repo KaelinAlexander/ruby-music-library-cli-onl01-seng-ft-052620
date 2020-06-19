@@ -23,6 +23,7 @@ class MusicLibraryController
 
   def get_input
     gets.strip
+    
   end
 
 end
