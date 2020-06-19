@@ -46,4 +46,9 @@ class MusicLibraryController
         main_menu
       end
   end
+
+  def list_songs
+
+  end
+
 end
