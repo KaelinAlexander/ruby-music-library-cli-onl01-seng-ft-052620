@@ -23,6 +23,8 @@ class MusicLibraryController
 
   def get_input
 
+  end
+
 end
 
 # # while input != "exit"
