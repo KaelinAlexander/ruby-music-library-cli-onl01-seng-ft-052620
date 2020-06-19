@@ -22,7 +22,7 @@ class MusicLibraryController
   end
 
   def get_input
-
+    gets.strip
   end
 
 end
@@ -55,3 +55,4 @@ end
 #   input = gets.strip.downcase
 # end
 # end
+  
