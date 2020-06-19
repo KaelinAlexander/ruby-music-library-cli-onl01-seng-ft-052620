@@ -46,7 +46,6 @@ class MusicLibraryController
         main_menu
       end
   end
-
 end
 
 # # while input != "exit"
