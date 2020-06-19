@@ -23,10 +23,27 @@ class MusicLibraryController
     case input
       when "list songs"
 
+          main_menu
       when "list artists"
 
-      when
+          main_menu
+      when "list genres"
 
+          main_menu
+      when "list artist"
+
+          main_menu
+      when "list genre"
+
+          main_menu
+      when "play song"
+
+          main_menu
+      when "exit"
+        exit
+      else
+        puts "Invalid Choice."
+        main_menu
 
   end
 
