@@ -21,22 +21,22 @@ class MusicLibraryController
     input = gets.strip
 
     case input
-      when "list songs"
+    when 'list songs'
           list_songs
           main_menu
-      when "list artists"
+      when 'list artists'
           list_artists
           main_menu
-      when "list genre"
+      when 'list genre'
           list_genres
           main_menu
-      when "list artist"
+      when 'list artist'
           list_songs_by_artist
           main_menu
-      when "list genre"
+      when 'list genre'
           list_songs_by_genre
           main_menu
-      when "play song"
+      when 'play song'
           play_song
           main_menu
       when "exit"
