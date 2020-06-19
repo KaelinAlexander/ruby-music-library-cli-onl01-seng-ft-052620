@@ -53,6 +53,10 @@ class MusicLibraryController
       end
   end
 
-  def
+  def list_artist
+      Artist.alphabetized.each_with_index(1) do |song, index|
+        puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+      end
+  end
 
 end
