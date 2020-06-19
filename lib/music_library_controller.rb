@@ -25,9 +25,9 @@ class MusicLibraryController
 
       when "list artists"
 
-      when 
+      when
 
-      
+
   end
 
 end
