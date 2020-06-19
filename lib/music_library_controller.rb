@@ -64,6 +64,6 @@ class MusicLibraryController
         puts "#{index}. #{genre.name}"
     end
 
-  def 
-    
+  def
+
 end
