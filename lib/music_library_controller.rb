@@ -62,4 +62,5 @@ class MusicLibraryController
   def list_genres
     Genre.alphabetized.each.with_index(1) do |genre, index|
       puts "#{index}. #{genre.name}"
+    end
 end
