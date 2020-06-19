@@ -72,8 +72,6 @@ class MusicLibraryController
     artist.songs.sort {|x, y| x.name <=> y.name}each.with_index(1) do |song, index|
       puts "#{index}. #{song.name} - #{song.genre.name}"
       end
-    else
-      puts "Invalid choice."
     end
   end
 
