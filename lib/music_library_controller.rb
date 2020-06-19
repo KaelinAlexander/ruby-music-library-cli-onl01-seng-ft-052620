@@ -16,11 +16,9 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip.downcase
-<<<<<<< HEAD
     # while input != "exit"
 =======
     while input != "exit"
->>>>>>> 8329cdbdf54f65e7a38a7d8881cff38ae31dc7c9
       case input
     when "list songs"
       list_songs
