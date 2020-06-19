@@ -16,6 +16,8 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = gets.strip.downcase
   end
+
+  def main_menu
     # # while input != "exit"
     #
     # while input != "exit"
