@@ -21,7 +21,7 @@ class MusicLibraryController
     get_input
   end
 
-  def main_menu_input
+  def get_input
 
 end
 
