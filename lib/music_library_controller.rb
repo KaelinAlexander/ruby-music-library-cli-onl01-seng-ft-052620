@@ -39,7 +39,7 @@ class MusicLibraryController
       when 'play song'
           play_song
           main_menu
-      when "exit"
+      when 'exit'
         "exit"
       else
         puts "Invalid Choice."
