@@ -5,6 +5,10 @@ class MusicLibraryController
   end
 
   def call
+    main_menu
+  end
+
+  def main_menu
     puts "Welcome to your music library!"
     puts "To list all of your songs, enter 'list songs'."
     puts "To list all of the artists in your library, enter 'list artists'."
@@ -15,10 +19,6 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
     input = gets.strip.downcase
-  end
-
-  def main_menu
-
   end
 
 end
