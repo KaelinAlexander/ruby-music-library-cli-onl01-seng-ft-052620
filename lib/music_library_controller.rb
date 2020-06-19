@@ -21,6 +21,8 @@ class MusicLibraryController
     input = gets.strip.downcase
   end
 
+  def main_menu_input
+
 end
 
 # # while input != "exit"
