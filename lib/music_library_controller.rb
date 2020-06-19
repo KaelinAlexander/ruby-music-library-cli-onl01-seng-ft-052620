@@ -45,7 +45,6 @@ class MusicLibraryController
         puts "Invalid Choice."
         main_menu
       end
-
   end
 
 end
