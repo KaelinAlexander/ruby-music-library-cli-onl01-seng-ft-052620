@@ -63,6 +63,7 @@ class MusicLibraryController
     Genre.alphabetized.each.with_index(1) do |genre, index|
         puts "#{index}. #{genre.name}"
     end
+  end
 
   def list_songs_by_artist
     puts "Please enter the name of an artist."
