@@ -22,10 +22,10 @@ class MusicLibraryController
 
     case input
       when "list songs"
-
+          list_songs
           main_menu
       when "list artists"
-
+          list_artists
           main_menu
       when "list genres"
 
@@ -65,5 +65,7 @@ class MusicLibraryController
     end
 
   def
+
+  end 
 
 end
