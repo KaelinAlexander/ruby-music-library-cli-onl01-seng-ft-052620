@@ -18,32 +18,36 @@ class MusicLibraryController
   end
 
   def main_menu
-    # # while input != "exit"
-    #
-    # while input != "exit"
-    #   case input
-    # when "list songs"
-    #   list_songs
-    #   puts "What would you like to do?"
-    #   input = gets.strip.downcase
-    # when "list artists"
-    #   list_artists
-    #   puts "What would you like to do?"
-    #   input = gets.strip.downcase
-    # when "list genres"
-    #   list_genres
-    #   puts "What would you like to do?"
-    #   input = gets.strip.downcase
-    # when "list artist"
-    #   list_songs_by_artist
-    # when "list genre"
-    #   list_songs_by_genre
-    #   puts "What would you like to do?"
-    #   input = gets.strip.downcase
-    # when "play song"
-    #   play_song
-    #   puts "What would you like to do?"
-    #   input = gets.strip.downcase
-    # end
-  # end
+
+  end
+
 end
+
+# # while input != "exit"
+#
+# while input != "exit"
+#   case input
+# when "list songs"
+#   list_songs
+#   puts "What would you like to do?"
+#   input = gets.strip.downcase
+# when "list artists"
+#   list_artists
+#   puts "What would you like to do?"
+#   input = gets.strip.downcase
+# when "list genres"
+#   list_genres
+#   puts "What would you like to do?"
+#   input = gets.strip.downcase
+# when "list artist"
+#   list_songs_by_artist
+# when "list genre"
+#   list_songs_by_genre
+#   puts "What would you like to do?"
+#   input = gets.strip.downcase
+# when "play song"
+#   play_song
+#   puts "What would you like to do?"
+#   input = gets.strip.downcase
+# end
+# end
