@@ -40,7 +40,7 @@ class MusicLibraryController
           play_song
           main_menu
       when 'exit'
-        "exit"
+        exit
       else
         puts "Invalid Choice."
         main_menu
