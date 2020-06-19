@@ -31,10 +31,10 @@ class MusicLibraryController
           list_genres
           main_menu
       when "list artist"
-
+          list_songs_by_artist
           main_menu
       when "list genre"
-
+          list_songs_by_genre
           main_menu
       when "play song"
 
