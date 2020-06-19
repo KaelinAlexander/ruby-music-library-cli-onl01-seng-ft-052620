@@ -20,12 +20,7 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = gets.strip
   end
-
-  def get_input
-    gets.strip
-
-  end
-
+  
 end
 
 # # while input != "exit"
