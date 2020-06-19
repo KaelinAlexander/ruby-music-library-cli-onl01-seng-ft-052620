@@ -44,6 +44,7 @@ class MusicLibraryController
       else
         puts "Invalid Choice."
         main_menu
+      end
 
   end
 
