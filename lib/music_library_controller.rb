@@ -48,18 +48,18 @@ class MusicLibraryController
   end
 
   def list_songs
-      Song.alphabetized.each_with_index(1) do |song, index|
+      Song.alphabetized.each.with_index(1) do |song, index|
         puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
       end
   end
 
   def list_artists
-      Artist.alphabetized.each_with_index(1) do |artist, index|
+      Artist.alphabetized.each.with_index(1) do |artist, index|
         puts "#{index}. #{artist.name}"
       end
   end
 
   def list_genres
-    Genre.alphabetized.each_with_index(1) do |genre, index|
+    Genre.alphabetized.each.with_index(1) do |genre, index|
       puts "#{index}. #{genre.name}"
 end
